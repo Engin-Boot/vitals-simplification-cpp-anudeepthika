@@ -1,6 +1,6 @@
 #include <assert.h>
- bool isOutOfRange(float value, float lowerlimit, float upperlimit){
-  return !(value<=lowerlimit && value>=upperlimit);
+ bool isInRange(float value, float lowerlimit, float upperlimit){
+  return (value>=lowerlimit && value<=upperlimit);
  }
  /*int bpmcheck(float bpm){
    int state1;
@@ -24,13 +24,13 @@
   return state3;
  }*/
 bool vitalsAreOk(float bpm, float spo2, float respRate) {
-int vitalsresult;
-vitalsresult = isOutOfRange(bpm,70,150) * isOutOfRange(spo2,90,100) * isOutOfRange(respRate,30,95);
- if(vitalsresult == 0){
+//int vitalsresult;
+return (isInRange(bpm,70,150) && isInRange(spo2,90,100) && isInRange(respRate,30,95));
+ /*if(vitalsresult == 0){
    return false;
  }
  else return true;
-}
+}*/
 
 int main() {
   assert(vitalsAreOk(80, 95, 60) == true);
