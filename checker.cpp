@@ -1,14 +1,5 @@
 #include <assert.h>
 
-bool vitalsAreOk(float bpm, float spo2, float respRate) {
-        /*  if(bpm < 70 || bpm > 150) {
-            return false;
-          } else if(spo2 < 90) {
-            return false;
-          } else if(respRate < 30 || respRate > 95) {
-            return false;
-          }
-          return true;*/
  int bpmcheck(float bpm){
    int state1;
     if(bpm < 70 || bpm > 150){
@@ -21,14 +12,15 @@ bool vitalsAreOk(float bpm, float spo2, float respRate) {
     state2 = 0;
     } else state2 = 1;
  }
- int respRatecheck(float bpm){
+ int respRatecheck(float respRate){
    int state3;
     if(respRate < 30 || respRate > 95){
     state3 = 0;
     } else state3 = 1;
  }
+bool vitalsAreOk(float bpm, float spo2, float respRate) {
 int vitalsresult;
-vitalresult = state1 * state2 * state3;
+vitalresult = bpmcheck(bpm) * spo2check(spo2) * respRatecheck(respRate);
  if(vitalresult == 0){
    return false;
  }
