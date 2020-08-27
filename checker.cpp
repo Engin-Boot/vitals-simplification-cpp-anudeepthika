@@ -13,8 +13,6 @@ int main() {
   assert(IsVitalInsideRange(70,60,100) == true);
   assert(IsVitalInsideRange(40,60,100) == false);
   assert(IsVitalInsideRange(120,60,100) == false);
- std::cout<<"You can go with vital test!!"<< std::endl;
   assert(vitalsAreOk(80, 95, 60) == true);
   assert(vitalsAreOk(60, 90, 40) == false);
- std::cout<<"vitals tested"<< std::endl;
 }
