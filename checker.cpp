@@ -25,7 +25,7 @@
  }*/
 bool vitalsAreOk(float bpm, float spo2, float respRate) {
 int vitalsresult;
-vitalsresult = isOutOfRange(bpm) * isOutOfRange(spo2) * isOutOfRange(respRate);
+vitalsresult = isOutOfRange(bpm,70,150) * isOutOfRange(spo2,90,100) * isOutOfRange(respRate,30,95);
  if(vitalsresult == 0){
    return false;
  }
