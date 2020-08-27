@@ -1,6 +1,6 @@
 #include <assert.h>
  bool isOutOfRange(float value, float lowerlimit, float upperlimit){
-  return !(value<lowerlimit && value>upperlimit);
+  return !(value<=lowerlimit && value>=upperlimit);
  }
  /*int bpmcheck(float bpm){
    int state1;
