@@ -6,7 +6,7 @@
 bool vitalsAreOk(float bpm, float spo2, float respRate) {
 //int vitalsresult;
 return (IsVitalInsideRange(bpm,70,150) && IsVitalInsideRange(spo2,90,100) && IsVitalInsideRange(respRate,30,95));
-
+}
 
 int main() {
   assert(IsVitalInsideRange(70,60,100) == true);
