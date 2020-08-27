@@ -1,6 +1,8 @@
 #include <assert.h>
-
- int bpmcheck(float bpm){
+ bool isOutOfRange(float value, float lowerlimit, float upperlimit){
+  return !(value<lowerlimit && value>upperlimit);
+ }
+ /*int bpmcheck(float bpm){
    int state1;
     if(bpm < 70 || bpm > 150){
     state1 = 0;
@@ -20,10 +22,10 @@
     state3 = 0;
     } else state3 = 1;
   return state3;
- }
+ }*/
 bool vitalsAreOk(float bpm, float spo2, float respRate) {
 int vitalsresult;
-vitalsresult = bpmcheck(bpm) * spo2check(spo2) * respRatecheck(respRate);
+vitalsresult = isOutOfRange(bpm) * isOutOfRange(spo2) * isOutOfRange(respRate);
  if(vitalsresult == 0){
    return false;
  }
