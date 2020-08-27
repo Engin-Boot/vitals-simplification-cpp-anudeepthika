@@ -1,4 +1,5 @@
 #include <assert.h>
+using namespace std;
  bool IsVitalInsideRange(float value, float lowerlimit, float upperlimit){
   return (value>=lowerlimit && value<=upperlimit);
  }
