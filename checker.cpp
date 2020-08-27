@@ -5,23 +5,26 @@
     if(bpm < 70 || bpm > 150){
     state1 = 0;
     } else state1 = 1;
+    return state1;
  }
  int spo2check(float spo2){
    int state2;
     if(spo2 < 90){
     state2 = 0;
     } else state2 = 1;
+  return state2;
  }
  int respRatecheck(float respRate){
    int state3;
     if(respRate < 30 || respRate > 95){
     state3 = 0;
     } else state3 = 1;
+  return state3;
  }
 bool vitalsAreOk(float bpm, float spo2, float respRate) {
 int vitalsresult;
-vitalresult = bpmcheck(bpm) * spo2check(spo2) * respRatecheck(respRate);
- if(vitalresult == 0){
+vitalsresult = bpmcheck(bpm) * spo2check(spo2) * respRatecheck(respRate);
+ if(vitalsresult == 0){
    return false;
  }
  else return true;
