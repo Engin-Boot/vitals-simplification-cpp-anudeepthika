@@ -1,38 +1,19 @@
 #include <assert.h>
- bool isInRange(float value, float lowerlimit, float upperlimit){
+ bool IsVitalInsideRange(float value, float lowerlimit, float upperlimit){
   return (value>=lowerlimit && value<=upperlimit);
  }
- /*int bpmcheck(float bpm){
-   int state1;
-    if(bpm < 70 || bpm > 150){
-    state1 = 0;
-    } else state1 = 1;
-    return state1;
- }
- int spo2check(float spo2){
-   int state2;
-    if(spo2 < 90){
-    state2 = 0;
-    } else state2 = 1;
-  return state2;
- }
- int respRatecheck(float respRate){
-   int state3;
-    if(respRate < 30 || respRate > 95){
-    state3 = 0;
-    } else state3 = 1;
-  return state3;
- }*/
+
 bool vitalsAreOk(float bpm, float spo2, float respRate) {
 //int vitalsresult;
-return (isInRange(bpm,70,150) && isInRange(spo2,90,100) && isInRange(respRate,30,95));
- /*if(vitalsresult == 0){
-   return false;
- }
- else return true;*/
-}
+return (IsVitalInsideRange(bpm,70,150) && IsVitalInsideRange(spo2,90,100) && IsVitalInsideRange(respRate,30,95));
+
 
 int main() {
+  assert(IsVitalInsideRange(70,60,100) == true);
+  assert(IsVitalInsideRange(40,60,100) == false);
+  assert(IsVitalInsideRange(120,60,100) == false);
+ std::cout<<"You can go with vital test!!"<< std::endl;
   assert(vitalsAreOk(80, 95, 60) == true);
   assert(vitalsAreOk(60, 90, 40) == false);
+ std::cout<<"vitals tested"<< std::endl;
 }
