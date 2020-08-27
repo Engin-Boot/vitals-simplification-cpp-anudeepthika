@@ -29,8 +29,8 @@ return (isInRange(bpm,70,150) && isInRange(spo2,90,100) && isInRange(respRate,30
  /*if(vitalsresult == 0){
    return false;
  }
- else return true;
-}*/
+ else return true;*/
+}
 
 int main() {
   assert(vitalsAreOk(80, 95, 60) == true);
