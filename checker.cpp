@@ -5,7 +5,7 @@ using namespace std;
 class AlertWithSMS
 {
   public:
-     void raiseAlert(const char* vitalNmae, const char* level)
+     void raiseAlert(const char* vitalName, const char* level)
      {
        cout << "SMS:" << vitalName << " " << level;
      }
@@ -14,7 +14,7 @@ class AlertWithSMS
 class AlertWithSound
 {
   public:
-     void raiseAlert(const char* vitalNmae, const char* level)
+     void raiseAlert(const char* vitalName, const char* level)
      {
        cout << "SMS:" << vitalName << " " << level;
      }
