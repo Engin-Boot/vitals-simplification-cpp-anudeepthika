@@ -32,5 +32,4 @@ return (IsVitalInsideRange(bpm,70,150) && IsVitalInsideRange(spo2,90,101) && IsV
 int main() {
   assert(vitalsAreOk(80, 95, 60) == true);
   assert(vitalsAreOk(60, 90, 40) == false);
- bool result
 }
