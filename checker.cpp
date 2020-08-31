@@ -38,6 +38,6 @@ return (IsVitalInsideRange(bpm,70,150) && IsVitalInsideRange(spo2,90,101) && IsV
 int main() {
  /* assert(vitalsAreOk(80, 95, 60) == true);
   assert(vitalsAreOk(60, 90, 40) == false);*/
-  
+ /*aim: Write for a different patient with different vitals and different limits e.g: p1= {{"bpm",60,70,150,&alertwithsms},{"spo2",93,90,100,&alertwithbuzzer},...}*/
  cout<<"passed"<<endl;
 }
