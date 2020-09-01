@@ -55,9 +55,6 @@ public:
 
 int main()
 {
-    /*Depending on the age group of the patient limits of vital range may differ!! So provide the lower and upper limits in the order of the vitals in the arrays respectively*/
-    /*For eg.: respiratory rate is different for different age groups*/
-    /*every patient may not require all the vital check. Here we can provide the required vitals for checking*/
     AlertWithSMS alertwithsms;
     AlertWithBuzzer alertwithbuzzer;
     cout << "....Vital check for patient1...." << endl;
