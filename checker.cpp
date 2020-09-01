@@ -67,13 +67,13 @@ int main()
     float vitalValues1[] = { 60,93,35 };
     PatientVitals Patient1(vitalNames1, vitalValues1, vitalLowerLimits1, vitalUpperLimits1);
     Patient1.checkVital(3,vitalNames1, vitalValues1, vitalLowerLimits1, vitalUpperLimits1, &alertwithsms); //alerting with SMS
-    /*cout << "....Vital check for patient2...." << endl;
+    cout << "....Vital check for patient2...." << endl;
     string vitalNames2[] = { "bpm","spo2","respRate","Body Temperature"};
     float vitalLowerLimits2[] = { 70,90,12,97};  //patient2 needs check for 3 vitals
     float vitalUpperLimits2[] = { 150,100,20,99 };
     float vitalValues2[] = { 90,83,10,100};
     PatientVitals Patient2(vitalNames2, vitalValues2, vitalLowerLimits2, vitalUpperLimits2);
     Patient2.checkVital(4, vitalNames2, vitalValues2, vitalLowerLimits2, vitalUpperLimits2, &alertwithbuzzer); //alerting with buzzer sound
-*/
+
     return 0;
 }
