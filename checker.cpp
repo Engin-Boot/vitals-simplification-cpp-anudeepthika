@@ -40,18 +40,10 @@ public:
     {
         for (int i = 0; i < totalNoOfVitalsToBeChecked; i++)
         {
-            /*if (value[i] < Lower[i])
-            {
-                alertptr->raiseAlert(name[i], "TOO LOW!!!");
-            }
-            else if (value[i] >= Upper[i])
-            {
-                alertptr->raiseAlert(name[i], "TOO HIGH!!!");
-            }*/
-            cras(name[i], value[i], Lower[i], Upper[i], alertptr);
+            checkRangeAndAlert(name[i], value[i], Lower[i], Upper[i], alertptr);
         }   
     }
-    void cras(string name, float val,float low,float up, AlertSystem* alerter)
+    void checkRangeAndAlert(string name, float val,float low,float up, AlertSystem* alerter)
     {
         if (val < low)
         {
@@ -80,7 +72,7 @@ int main()
     Patient1.checkVital(3,vitalNames1, vitalValues1, vitalLowerLimits1, vitalUpperLimits1, &alertwithsms); //alerting with SMS
     cout << "....Vital check for patient2...." << endl;
     string vitalNames2[] = { "bpm","spo2","respRate","Body Temperature"};
-    float vitalLowerLimits2[] = { 70,90,12,97};  //patient2 needs check for 3 vitals
+    float vitalLowerLimits2[] = { 70,90,12,97};  //patient2 needs check for 4 vitals
     float vitalUpperLimits2[] = { 150,100,20,99 };
     float vitalValues2[] = { 90,83,10,100};
     PatientVitals Patient2(vitalNames2, vitalValues2, vitalLowerLimits2, vitalUpperLimits2);
