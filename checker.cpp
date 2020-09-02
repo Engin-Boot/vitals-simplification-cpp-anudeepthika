@@ -40,16 +40,27 @@ public:
     {
         for (int i = 0; i < totalNoOfVitalsToBeChecked; i++)
         {
-            if (value[i] < Lower[i])
+            /*if (value[i] < Lower[i])
             {
                 alertptr->raiseAlert(name[i], "TOO LOW!!!");
             }
             else if (value[i] >= Upper[i])
             {
                 alertptr->raiseAlert(name[i], "TOO HIGH!!!");
-            }
+            }*/
+            cras(name[i], value[i], Lower[i], Upper[i], alertptr);
+        }   
+    }
+    void cras(string name, float val,float low,float up, AlertSystem* alerter)
+    {
+        if (val < low)
+        {
+            alerter->raiseAlert(name, "TOO LOW!!!");
         }
-        
+        else if (val >= up)
+        {
+            alerter->raiseAlert(name, "TOO HIGH!!!");
+        }
     }
 };
 
